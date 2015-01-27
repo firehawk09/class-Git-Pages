@@ -1,7 +1,6 @@
 @import "../bower_components/normalize-scss/_normalize.scss";
 @import "../bower_components/typeplate-starter-kit/css/_typeplate.scss";
 @import "./mixins.scss";
-
 /**
  * BOX-SIZING
  */
@@ -9,6 +8,13 @@
 *, *:before, *:after {
     box-sizing: border-box;
 }
+
+
+/**
+** variables
+**/
+$backgroundColor: #2E0927;
+
 
 /**
  * GRIDS
@@ -20,7 +26,6 @@
     font-size: 0;
     text-align: justify;
     position: relative;
-
     & > * {
         font-size: medium;
         text-align: left;
@@ -28,7 +33,6 @@
         width: 100%;
         vertical-align: top;
     }
-
     &:after {
         display: inline-block;
         width: 100%;
@@ -36,16 +40,46 @@
         font-size: medium;
     }
 }
-
 @include gridify(2, 400);
 @include gridify(4, 600);
-
 /**
  * GENERAL
  */
 
-img {max-width:100;}
-
+img {
+    max-width: 10em;
+    max-height: 10em;
+    border-radius: 10px;
+}
 body {
     transition: opacity .25s ease;
+    padding: 0.75em;
+    .left {
+        color:#CEF09D;
+        font-family: Times, serif;
+        background-color: #6FACC7;
+        position: absolute;
+        width: 19em;
+        min-height: 30em;
+        border-radius: 10px;
+    }
+    .right div {
+        position: relative;
+        display: block;
+        padding-left: 3em;
+        padding: 0.2em;
+        margin-left: 19.25em;
+        background-color: #C6DBBD;
+        width: 73%;
+        border-radius: 10px;
+    }
+    h2 {
+        color: $backgroundColor;
+    }
+    h3 {
+        color: $backgroundColor;
+    }
+    h4 {
+        color: $backgroundColor;
+    }
 }
