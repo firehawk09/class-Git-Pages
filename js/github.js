@@ -33,10 +33,13 @@ GithubClient.prototype.drawToPage = function() {
 
         var userData = arguments[0][0];
         var profileTemplate = arguments[2][0];
+        console.log(profileTemplate)
         var repoData = arguments[1][0];
         var repoTemplate = arguments[3][0];
 
-        document.getElementsByClassName("left")[0].innerHTML+= _.template(profileTemplate, userData);
+        var compiledTemplate = _.template(profileTemplate, userData)
+        document.getElementsByClassName("left")[0].innerHTML+= compiledTemplate;
+        // document.getElementsByClassName("left")[0].innerHTML+= _.template(profileTemplate, userData);
 
         repoData.forEach(function(value) {
             // console.log(value[0]);

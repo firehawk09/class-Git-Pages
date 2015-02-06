@@ -14,7 +14,7 @@ function app() {
         {
             url: "./bower_components/jquery/dist/jquery.min.js"
         }, {
-            url: "./bower_components/lodash/lodash.min.js"
+            url: "./bower_components/lodash/dist/lodash.min.js"
         }, {
             url: "./js/github.js"
         }, {
